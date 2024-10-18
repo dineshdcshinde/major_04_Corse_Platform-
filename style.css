@@ -95,6 +95,7 @@ nav {
   margin-top: 3%;
   position: fixed;
   z-index: 111;
+  /* border: 1px solid #caccd6; */
 }
 
 .nav-left {
@@ -111,6 +112,7 @@ nav {
   text-decoration: none;
   font-size: 1rem;
   color: #fff;
+  cursor: pointer;
 }
 
 .logo-nav {
@@ -133,35 +135,31 @@ nav {
 
 /* nav-rigt */
 
-.nav-right {
+.nav-right{
   width: 40%;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   gap: 10%;
 }
 
-.nav-right button {
+.sign-btn{
   padding: 10px 20px;
   border: none;
-  border: 2px solid #ddd;
-  border-radius: 25px;
-  background-color: transparent;
-  font-size: 1rem;
-  font-weight: 700;
   outline: none;
   color: #fff;
- 
-}
-
-.sign-btn {
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
   position: relative;
   overflow: hidden;
-  transition: color 0.4s ease;
+  transition: color 0.3s ease;
 }
 
-.sign-btn::before {
-  content: "";
+.sign-btn::before{
+  content:"";
   position: absolute;
   top: 100%;
   left: 0;
@@ -169,45 +167,222 @@ nav {
   height: 100%;
   width: 100%;
   z-index: -1;
-  transition: top 0.4s ease;
+  transition: top 0.3s ease;
 }
 
-.sign-btn:hover::before {
-  top: 0;
+.sign-btn:hover::before{
+  top: 0%;
 }
 
-.sign-btn:hover {
+.sign-btn:hover{
   color: #000;
 }
 
-/* talk btn */
+/* Talk btn */
 
-.nav-right .talk-btn {
-    position: relative;
-    overflow: hidden;
-  border: 1px solid transparent;
+.talk-btn{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
   color: #fff;
-  background-color: #3561ff;
   cursor: pointer;
-  transition: color 0.4s ease;
+  background-color: #1b74d9;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  /* position: relative; */
+  overflow: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .talk-btn::before{
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    transition: top 0.4s ease;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: -1;
+  transition: top 0.3s ease;
+
 }
 
 .talk-btn:hover::before{
-    top: 0;
+  top: 0;
 }
 
-.nav-right .talk-btn:hover{
-    color: #3561ff;
+.talk-btn:hover{
+  background-color: transparent;
+  color: #000;
+}
+
+/* hero Section */
+
+.hero{
+  min-height: 100%;
+  width: 100%;
+  padding-top: 9rem;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hero-left{
+  width: 50%;
+  padding: 2%;
+  display: block;
+  /* background-color: aqua; */
+}
+
+.hero-left h2{
+  font-size: 2.9rem;
+  font-weight: 400;
+  line-height: 3rem;
+  margin-bottom: 3%;
+}
+
+.hero-left h2 i{
+  color: #ff4aa9;
+}
+
+.hero-left p{
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+  margin-bottom: 3%;
+}
+
+.hero-left button{
+  cursor: pointer;
+  padding: 10px 30px;
+  border:none;
+  outline:none;
+  border:2px solid #3561ff;
+  border-radius: 25px;
+  background-color: #3561ff;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+  display:block;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-left button span{
+  position:relative;
+  z-index: 1;
+}
+
+.hero-left button::before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height:100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 0;
+  transition: top 0.3s ease;
+}
+
+.hero-left button:hover::before{
+  top: 0;
+}
+
+.hero-left button:hover{
+  color:#000;
+  background-color: transparent;
+}
+
+/* hero-right */
+.hero-right{
+  width: 50%;
+  height: 50%;
+  display: block;
+}
+
+.hero-right video{
+  height:auto;
+  width: 100%;
+  padding-right: 2.5%;
+  border-radius: 12.5rem 0rem 0rem 12.5rem;
+  object-fit: cover;
+}
+
+.hero-desc{
+margin-top: 1%;
+height: 10%;
+width: 100%;
+max-width: 80%;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.hero-desc-item{
+  padding-right: 6%;
+  border-right: 2px solid #caccd6;
+}
+
+.hero-desc-item h3{
+  font-size:2.7rem;
+  font-weight: 500;
+}
+
+.hero-desc-item p{
+  color:#fd612a;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* vision section */
+
+.vision-sec{
+  min-height: 100%;
+  width: 100%;
+  /* background-color: #1a1a1a; */
+}
+
+.vision-sec h2{
+  padding-top: 5%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 3%;
+}
+
+.vision-sec h2 i:first-child{
+  color: 
+  #fd612a;
+}
+
+.visionary-container{
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.vision-main1{
+  width: 50%;
+}
+
+.vision-main1 h3{
+  font-size: 2.05rem;
+  font-weight: 600;
+}
+
+.vision-main1 h3 span{
+color: #ff4aa9;
+font-weight: 700;
+}
+
+.vision-main1 ul{
+ list-style: none;
 }
